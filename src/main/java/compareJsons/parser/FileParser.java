@@ -15,8 +15,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FileParser {
-    public final String devArticleFile = "D:\\repo\\torelik\\dev\\court-main\\court-app\\app\\dictionary\\criminal\\newArticle.json";
-    public final String masterArticleFile = "D:\\repo\\torelik\\prod\\court-main\\court-app\\app\\dictionary\\criminal\\newArticle.json";
+    public final String devArticleFile = "D:\\repo\\torelik\\dev\\court-practicejson.main\\court-app\\app\\dictionary\\criminal\\newArticle.json";
+    public final String masterArticleFile = "D:\\repo\\torelik\\prod\\court-practicejson.main\\court-app\\app\\dictionary\\criminal\\newArticle.json";
 
     public List<JsonFileDto> parseJson(String path) throws IOException {
         List<JsonFileDto> fileDtoList = new ArrayList<>();

@@ -14,7 +14,7 @@ public class EotinishFileDownloaderTest {
     public static final String pathToFileSaveData = "C:\\Users\\Amirzhan\\Downloads\\test\\saveData.docx";
     public static final String pathToLocalFile = "C:\\Users\\Amirzhan\\Downloads\\test\\990442.docx";
 
-    //private static final String pathStrWithoutBug = "C:\\Users\\Amirzhan\\Documents\\torelik\\dev\\eotinish-client-test\\src\\main\\resources\\saveData.docx";
+    //private static final String pathStrWithoutBug = "C:\\Users\\Amirzhan\\Documents\\torelik\\dev\\eotinish-client-test\\src\\practicejson.main\\resources\\saveData.docx";
 
     private static final String pathToTxt1 = "C:\\Users\\Amirzhan\\Downloads\\test\\eotinishTest1.txt";
 

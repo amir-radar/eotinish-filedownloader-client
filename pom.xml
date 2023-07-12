@@ -21,7 +21,7 @@
                         </nonFilteredFileExtensions>
                         <resources>
                             <resource>
-                                <directory>src/main/resources</directory>
+                                <directory>src/practicejson.main/resources</directory>
 <!--                                <directory>C:/Users/Amirzhan/Downloads/test</directory>-->
                                 <filtering>false</filtering>
                                 <includes>
@@ -74,6 +74,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -87,6 +88,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
 
 <!--    <plugin>-->
 <!--        <artifactId>maven-resources-plugin</artifactId>-->
@@ -109,7 +111,7 @@
 <!--                    &lt;!&ndash; <outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/WEB-INF/classes</outputDirectory> &ndash;&gt;-->
 <!--                    <resources>-->
 <!--                        <resource>-->
-<!--                            <directory>src/main/resources</directory>-->
+<!--                            <directory>src/practicejson.Main/resources</directory>-->
 <!--                            <filtering>false</filtering>-->
 <!--                            <includes>-->
 <!--                                <include>**/*.docx</include>-->

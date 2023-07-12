@@ -1,0 +1,32 @@
+{
+  "name": "Test file",
+  "reports": [
+    {
+      "number":"0",
+      "id":"361",
+      "rep_code":"REP_TEST",
+      "string":"",
+      "rep_name":"Тестовый отчет",
+      "rep_type":"JASPER",
+      "rep_body":"",
+      "blob":"",
+      "rep_file_name":"REP_TEST.jrxml",
+      "rep_file_type":"application/octet-stream",
+      "updated":"",
+      "date":"11.01.2015 22:02:11"
+    },{
+      "number":"1",
+      "id":"8492",
+      "rep_code":"REPORT_KEG_CTE_RU",
+      "string":"",
+      "rep_name":"Договор на передачу электроэнергии по сетям НЭС(рус)",
+      "rep_type":"WORD",
+      "rep_body":"",
+      "blob":"",
+      "rep_file_name":"Дог_на_передачу_17112021_рус.docx",
+      "rep_file_type":"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "updated":"",
+      "date":"17.11.2021 14:40:53"
+    }
+  ]
+}

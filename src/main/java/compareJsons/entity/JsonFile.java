@@ -9,6 +9,9 @@ public class JsonFile {
     private String kk;
     private String id;
 
+    public JsonFile(JsonFile fileDto) {
+    }
+
     public String getRu() {
         return ru;
     }
