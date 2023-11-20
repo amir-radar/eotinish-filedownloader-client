@@ -10,12 +10,20 @@ import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.X509EncodedKeySpec;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class KeyReader {
 
     public static void main(String[] args) {
         File file = new File(filePath);
-        File outputFile = new File(savedCert);
+        Date date = Calendar.getInstance().getTime();
+        DateFormat dateFormat = new SimpleDateFormat("yyyymmdd_hhmmss");
+        String strDate = dateFormat.format(date);
+        String savedCertFile = pathToSaveCert + "savedCert_" +  strDate + ".der";
+        File outputFile = new File(savedCertFile);
         try {
             String publicKeyString = readPublicKeyStringFromRequest(file);
             saveCertificateFromPublicKeyString(publicKeyString, outputFile);
@@ -25,7 +33,7 @@ public class KeyReader {
     }
 
     public static final String filePath = "C:\\Users\\Amirzhan\\Documents\\tasks\\getCert230622.txt";//"C:\\Users\\Amirzhan\\Documents\\requestForAwardServiceForReadCert.xml"; //certFromRequestAwardService.xml"; //requestForAwardServiceForReadCert.xml
-    public static final String savedCert = "C:\\Users\\Amirzhan\\Documents\\savedCert230622_2.der";
+    public static final String pathToSaveCert = "C:\\Users\\Amirzhan\\Documents\\";
     public static final String beginString = "<wsse:KeyIdentifier EncodingType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\" ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3\">";
     public static final String beginString2 = "<ds:X509Certificate>";
     public static final String endString = "</wsse:KeyIdentifier>";
