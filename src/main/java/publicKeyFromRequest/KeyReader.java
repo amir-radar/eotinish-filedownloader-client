@@ -24,10 +24,12 @@ public class KeyReader {
         }
     }
 
-    public static final String filePath = "C:\\Users\\Amirzhan\\Documents\\requestForAwardServiceForReadCert.xml"; //certFromRequestAwardService.xml"; //requestForAwardServiceForReadCert.xml
-    public static final String savedCert = "C:\\Users\\Amirzhan\\Documents\\savedCert.der";
+    public static final String filePath = "C:\\Users\\Amirzhan\\Documents\\tasks\\getCert230622.txt";//"C:\\Users\\Amirzhan\\Documents\\requestForAwardServiceForReadCert.xml"; //certFromRequestAwardService.xml"; //requestForAwardServiceForReadCert.xml
+    public static final String savedCert = "C:\\Users\\Amirzhan\\Documents\\savedCert230622_2.der";
     public static final String beginString = "<wsse:KeyIdentifier EncodingType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\" ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3\">";
+    //public static final String beginString = "<ds:X509Certificate>";
     public static final String endString = "</wsse:KeyIdentifier>";
+    //public static final String endString = "</ds:X509Certificate>";
 
     public static RSAPublicKey readPublicKeyFromPemFile(File file) throws Exception {
         String key = getStringFromFile(file);
