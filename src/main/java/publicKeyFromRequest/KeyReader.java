@@ -27,9 +27,9 @@ public class KeyReader {
     public static final String filePath = "C:\\Users\\Amirzhan\\Documents\\tasks\\getCert230622.txt";//"C:\\Users\\Amirzhan\\Documents\\requestForAwardServiceForReadCert.xml"; //certFromRequestAwardService.xml"; //requestForAwardServiceForReadCert.xml
     public static final String savedCert = "C:\\Users\\Amirzhan\\Documents\\savedCert230622_2.der";
     public static final String beginString = "<wsse:KeyIdentifier EncodingType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\" ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3\">";
-    //public static final String beginString = "<ds:X509Certificate>";
+    public static final String beginString2 = "<ds:X509Certificate>";
     public static final String endString = "</wsse:KeyIdentifier>";
-    //public static final String endString = "</ds:X509Certificate>";
+    public static final String endString2 = "</ds:X509Certificate>";
 
     public static RSAPublicKey readPublicKeyFromPemFile(File file) throws Exception {
         String key = getStringFromFile(file);
@@ -48,8 +48,17 @@ public class KeyReader {
 
     public static String readPublicKeyStringFromRequest(File file) throws Exception {
         String request = getStringFromFile(file);
-        int beginIndex = request.indexOf(beginString) + beginString.length();
-        int endIndex = request.indexOf(endString);
+        int beginIndex = 0;
+        int endIndex = 0;
+        if (request.contains(beginString2) && request.contains(endString2)){
+            beginIndex = request.indexOf(beginString2) + beginString2.length();
+            endIndex = request.indexOf(endString2);
+        } else if (request.contains(beginString) && request.contains(endString)){
+            beginIndex = request.indexOf(beginString) + beginString.length();
+            endIndex = request.indexOf(endString);
+        } else {
+            throw new Exception("No public key found in request");
+        }
         return request.substring(beginIndex, endIndex).trim();
     }
 
